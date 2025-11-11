@@ -1,0 +1,250 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* GLOBAL BACKGROUND */
+body {
+  background: linear-gradient(135deg, #7b2ff7, #9b5de5);
+  min-height: 100vh;
+  color: white;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  height: 70px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  color: white;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+
+/* LEFT TITLE */
+.navbar h2 {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* RIGHT SECTION (links + profile icon) */
+.right-section {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+/* NAV LINKS */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  transition: 0.25s ease;
+}
+
+/* GLASS HOVER EFFECT */
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+/* PROFILE MENU */
+.profile-menu {
+  position: relative;
+}
+
+.profile-menu img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  transition: 0.2s ease;
+}
+
+.profile-menu img:hover {
+  transform: scale(1.07);
+}
+
+/* DROPDOWN */
+.dropdown {
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+  width: 150px;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  padding: 10px;
+  animation: fadeIn 0.2s ease-out;
+}
+
+.dropdown p {
+  padding: 10px 12px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.dropdown p:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+/* DROP-DOWN ANIMATION */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* MAIN CONTENT GLASS CARD */
+.main {
+  padding: 50px;
+  max-width: 900px;
+  margin: 110px auto 40px auto;
+  background: rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+/* AUTH CONTAINER */
+.container {
+  margin: 120px auto;
+  max-width: 400px;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  color: white;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+}
+
+.container input {
+  width: 100%;
+  padding: 12px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border: 1px solid rgba(255,255,255,0.4);
+  background: rgba(255,255,255,0.2);
+  color: white;
+}
+
+.container input::placeholder {
+  color: #f0dfff;
+}
+
+/* BUTTONS */
+button {
+  padding: 12px 25px;
+  background: #4c1d95;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background: #5b21b6;
+}
+
+/* FILE INPUT */
+.file-input {
+  display: none;
+}
+
+.file-label {
+  background: #2563eb;
+  color: white;
+  padding: 12px 25px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 17px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: 0.25s ease;
+}
+
+.file-label:hover {
+  background: #1e40af;
+}
+
+/* GLOBAL IMAGE STYLING */
+.main img {
+  margin-top: 12px;
+  border-radius: 12px;
+  max-width: 100%;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.3);
+}
+
+/* INFO BOX */
+.info-box {
+  margin-top: 40px;
+  padding: 25px;
+  text-align: left;
+  background: rgba(255,255,255,0.25);
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+}
+
+/* ✅ IMAGE COMPARISON LAYOUT */
+.image-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.preview-box, 
+.detected-box {
+  text-align: center;
+}
+
+/* IMAGE SIZES */
+.preview-img,
+.result-img {
+  width: 350px;
+  border-radius: 12px;
+  box-shadow: 0 6px 25px rgba(0,0,0,0.3);
+}
+
+/* ✅ CENTERED DETECT BUTTON BELOW BOTH IMAGES */
+.detect-btn {
+  margin: 25px auto 0 auto;  /* centers horizontally */
+  display: block;            /* allows centering */
+  padding: 12px 25px;
+  background: #4c1d95;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.25s ease;
+  width: fit-content;
+}
+
+.detect-btn:hover {
+  background: #5b21b6;
+}
